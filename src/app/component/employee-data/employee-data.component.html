@@ -1,0 +1,55 @@
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<div class="container">
+    <div class="main">
+        <div class="text">
+            <p>Employee Details</p>
+        </div>
+
+        <div class="search">
+            <span class="material-symbols-outlined" style="margin-top: 5px;margin-left: 10px;">
+                search
+            </span>
+        </div>
+
+        <div style="margin-top: -35px;" (click)="add()">
+            <button class="add" mat-button> + Add User</button>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">GENDER</th>
+                    <th scope="col">DEPARTMENT</th>
+                    <th scope="col">SALARY</th>
+                    <th scope="col">START DATE</th>
+                    <th scope="col">ACTIONS</th>
+                </tr>
+            </thead>
+            <tbody class="data" >
+                <tr  *ngFor="let row of empData">
+                    <td>{{row.name}}</td>
+                    <td>{{row.gender}}</td>
+                    <td>{{row.dept}}</td>
+                    <td>{{row.salary}}</td>
+                    <td>{{row.date}}</td>
+                    <td>
+                        <button class="delete" mat-button>
+                            <span class="material-symbols-outlined" (click)="deleteEmp(row)" style="cursor: pointer;">
+                                delete
+                                </span>
+                        </button>
+                        <button class="delete"  mat-button>
+                            <span class="material-symbols-outlined">
+                                edit
+                                </span>
+                        </button>
+                    </td>
+                </tr>
+
+                
+            </tbody>
+        </table>
+    </div>
+</div>
