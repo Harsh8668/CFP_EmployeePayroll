@@ -23,17 +23,19 @@ export class ApiService {
       }))
   }
 
-  updateEmployee(data: any, id:number) {
-    return this.http.put<any>("http://localhost:3000/posts" + id, data)
-      .pipe(map((resource: any) => {
-        return resource;
-      }))
-  }
+  // updateEmployee(data: any, id:number) {
+  //   return this.http.put<any>("http://localhost:3000/posts" + id, data)
+  //     .pipe(map((resource: any) => {
+  //       return resource;
+  //     }))
+  // }
 
   deleteEmployee(id:number) {
-    return this.http.delete<any>("http://localhost:3000/posts" +id)
+    return this.http.delete<any>("http://localhost:3000/posts/"+id)
       .pipe(map((resource: any) => {
         return resource;
       }))
   }
 }
+
+

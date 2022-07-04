@@ -33,22 +33,20 @@
                     <td>{{row.gender}}</td>
                     <td>{{row.dept}}</td>
                     <td>{{row.salary}}</td>
-                    <td>{{row.date}}</td>
+                    <td>{{row.date}} {{row.month}} {{row.year}}</td>
                     <td>
-                        <button class="delete" mat-button>
-                            <span class="material-symbols-outlined" (click)="deleteEmp(row)" style="cursor: pointer;">
+                        <button class="delete" (click)="deleteEmp(row)" mat-button>
+                            <span class="material-symbols-outlined" style="cursor: pointer;">
                                 delete
                                 </span>
                         </button>
-                        <button class="delete"  mat-button>
-                            <span class="material-symbols-outlined">
+                        <button class="edit" (click)="openDialog()" mat-button>
+                            <span class="material-symbols-outlined" style="cursor: pointer;">
                                 edit
                                 </span>
                         </button>
                     </td>
                 </tr>
-
-                
             </tbody>
         </table>
     </div>

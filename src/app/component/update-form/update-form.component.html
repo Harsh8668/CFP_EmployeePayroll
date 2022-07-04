@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="main">
+        <mat-card>
+            <div class="text">
+                Employee Payroll form
+            </div>
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                <div class="name" >
+                    Name
+                    <input type="text" class="name1" formControlName="name">
+                </div>
+
+                <div class="profile">
+                    Profile image
+                    <mat-radio-group aria-label="Select an option" style="margin-left: 40px;">
+                        <mat-radio-button value="1"></mat-radio-button>
+                        <mat-radio-button value="2"></mat-radio-button>
+                        <mat-radio-button value="3"></mat-radio-button>
+                        <mat-radio-button value="4"></mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="gender">
+                    Gender
+                    <mat-radio-group aria-label="Select an option" formControlName="gender">
+                        <mat-radio-button value="Male" style="margin-left:20px;">Male</mat-radio-button>
+                        <mat-radio-button value="Female" style="margin-left:20px;">Female</mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <div class="dept">
+                    Department
+                    <input type="checkbox" style="margin-left: 20px;"  formControlName="dept">HR
+                    <input type="checkbox" style="margin-left: 20px;"  formControlName="dept">Sales
+                    <input type="checkbox" style="margin-left: 20px;"  formControlName="dept">Finance
+                    <input type="checkbox" style="margin-left: 20px;"  formControlName="dept">Engineer
+                    <input type="checkbox" style="margin-left: 20px;"  formControlName="dept">Others
+                </div>
+
+                <div class="salary">
+                    Salary
+                    <select class="sal"  formControlName="salary" style="margin-left: 98px;">
+                        <option value="Select">Select Salary</option>
+                        <option value="10000">10000</option>
+                        <option value="25000">25000</option>
+                        <option value="50000">50000</option>
+                        <option value="75000">75000</option>
+                        <option value="100000">100000</option>
+                    </select>
+                </div>
+
+                <div class="date">
+                    <p>Start Date</p>
+                    <input matInput [matDatepicker]="picker" class="date1"  formControlName="date" style="margin-top:-80px;margin-left: 150px;">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </div>
+
+                <div class="note">
+                    <p>Notes</p>
+                    <textarea class="area"></textarea>
+                </div>
+<!-- 
+                <div style="margin-top: 30px;">
+                    <button class="cancel" mat-button>Cancel</button>
+                </div> -->
+
+                <div style="margin-top: 15px;">
+                    <button class="submit" mat-button (click)="postEmp()" >Submit</button>
+                </div>
+
+                <!-- <div style="margin-top: -43px;">
+                    <button class="reset" mat-button (click)="onReset()">Reset</button>
+                </div> -->
+            </form>
+        </mat-card>
+    </div>
+</div>

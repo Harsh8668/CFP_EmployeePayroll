@@ -4,5 +4,8 @@ export class formModel{
     gender: string = '';
     dept : string = '';
     salary : string = '';
-    date!: Date;
+    date: string = '';
+    month: string = '';
+    year: string = '';
+
 }

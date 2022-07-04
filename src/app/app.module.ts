@@ -19,7 +19,11 @@ import {MatRadioModule} from '@angular/material/radio';
 import { MatInputModule } from '@angular/material/input';
 import { EmployeeDataComponent } from './component/employee-data/employee-data.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatDialogModule} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
+import { UpdateFormComponent } from './component/update-form/update-form.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -27,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     FormComponent,
     EmployeeDataComponent,
+    UpdateFormComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +46,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatSelectModule,
     MatRadioModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
